@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "3063cd2c-7670-43a5-83b5-15a581da93f0",
+		"name": "SampleCode",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all Doctors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8750/doctors",
+					"host": [
+						"localhost"
+					],
+					"port": "8750",
+					"path": [
+						"doctors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get existing Doctor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8750/doctors/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8750",
+					"path": [
+						"doctors",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get nonexistent Doctor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8750/doctors/99",
+					"host": [
+						"localhost"
+					],
+					"port": "8750",
+					"path": [
+						"doctors",
+						"99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Doctor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Postman\", \r\n    \"lastName\": \"Example\",\r\n    \"address\": \"576 Mail Rd\",\r\n    \"state\": \"ME\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8750/doctors",
+					"host": [
+						"localhost"
+					],
+					"port": "8750",
+					"path": [
+						"doctors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Doctor",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"firstName\": \"Default\",\r\n    \"lastName\": \"Individual\",\r\n    \"address\": \"159 Address Change Blvd\",\r\n    \"state\": \"CT\",\r\n    \"createdAt\": \"2020-08-25T04:08:11.544296Z\",\r\n    \"modifiedAt\": \"2020-08-25T04:08:11.544296Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8750/doctors/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8750",
+					"path": [
+						"doctors",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Doctor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"firstName\": \"Default\",\r\n    \"lastName\": \"Individual\",\r\n    \"address\": \"159 Address Change Blvd\",\r\n    \"state\": \"CT\",\r\n    \"createdAt\": \"2020-08-25T04:08:11.544296Z\",\r\n    \"modifiedAt\": \"2020-08-25T04:08:11.544296Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8750/doctors/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8750",
+					"path": [
+						"doctors",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
